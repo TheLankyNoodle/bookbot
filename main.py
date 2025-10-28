@@ -8,19 +8,17 @@ def get_book_text(path):
     return file_contents
 
 def main():
+    path = "./books/frankenstein.txt"
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {path}...")
     print("----------- Word Count ----------")
-    print(f"Found {get_word_count("./books/frankenstein.txt")} total words")
+    print(f"Found {get_word_count(path)} total words")
     print("--------- Character Count -------")
-    dict_list = sorted_dict_list(get_char_counts("./books/frankenstein.txt"))
+    dict_list = sorted_dict_list(get_char_counts(path))
     for i in dict_list:
         if i["char"].isalpha():
             print(f"{i["char"]}: {i["num"]}")
     print("============= END ===============")
-
-    print(f"Found {get_word_count("./books/frankenstein.txt")} total words")
-    print(get_char_counts("./books/frankenstein.txt"))
 
 main()
 

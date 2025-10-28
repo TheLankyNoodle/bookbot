@@ -8,8 +8,8 @@ def sort_on(items):
 
 def sorted_dict_list(dict_of_char_and_num):
     new_dicts = []
-    for (key, value) in dict_of_char_and_num:
-        new_dicts.append({"char": key, "num": value})
+    for item in dict_of_char_and_num:
+        new_dicts.append({"char": item, "num": dict_of_char_and_num[item]})
     new_dicts.sort(reverse = True, key = sort_on)
     return new_dicts
 
